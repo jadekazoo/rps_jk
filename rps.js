@@ -1,6 +1,6 @@
 // playerData = ["name", wins, "weapon"];
 // Starting player 1 with 2 wins so the program executes and finishes instead of looping forever
-var playerOneData = ["", 2, ""];
+var playerOneData = ["", 0, ""];
 
 var playerTwoData = ["", 0, ""];
 
@@ -17,15 +17,17 @@ inputData = "Danielle";
 console.log(inputData);
 playerTwoData[0] = inputData;
 
+var weapons = ['rock' , 'paper', 'scissors'];
+
 // Simulated input on lines 23, 24, 28, 29
 while(playerOneData[1] != 3 && playerTwoData[1] != 3) {
 	console.log("" + playerOneData[0] + ", choose your weapon!");
-	inputData = "rock";
+	inputData = weapons[parseInt(Math.random()*weapons.length) %3];
 	console.log(inputData);
 	playerOneData[2] = inputData;
 
 	console.log("" + playerTwoData[0] + ", choose your weapon!");
-	inputData = "scissors";
+	inputData = weapons[parseInt(Math.random()*weapons.length) %3];
 	console.log(inputData);
 	playerTwoData[2] = inputData;
 
